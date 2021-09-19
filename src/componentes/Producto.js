@@ -1,5 +1,7 @@
 import React from "react";
-import biela from '';
+import biela from '../images/bielafz16.jpg';
+import '../componentes/Producto.css';
+import ItemCount from "./ItemCount";
 
 
 export default function Producto(){
@@ -10,9 +12,9 @@ return(
         <div class="contenedorItems__item">
             <h2 >Kit cilindro FZ16</h2>
             <img src={biela}/>
-            <input></input>
+            <ItemCount/>
             <h3 >$350.000</h3>
-            <button type="submit" class="contenedorItems__item__boton">Comprar</button>
+            <button type="submit" className="contenedorItems__item__boton">Comprar</button>
         </div>
         {/* <div class="contenedorItems__item">
          <h2 >Kit Piston XR 250</h2>
@@ -76,7 +78,9 @@ return(
 
     </div> 
 
- </div>);
+ </div>
+ );
+
+    }
 
     
-}

@@ -2,9 +2,8 @@ import Navbar from 'react-bootstrap/NavBar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './NavBar.css';
-
+import CardWidget from '../componentes/CartWidget';
 
 
 export default  function BarraNavegacion(){
@@ -20,10 +19,7 @@ export default  function BarraNavegacion(){
       <Nav.Link href="#pricing">Promociones</Nav.Link>
     </Nav>
     </Container>
-    <div className="divShoppingCartIcon">
-    <ShoppingCartIcon></ShoppingCartIcon><h3>1</h3>
-    </div>
-    
+    <CardWidget/>    
   </Navbar>
    
 </>
