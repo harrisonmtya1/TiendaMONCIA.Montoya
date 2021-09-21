@@ -12,7 +12,7 @@ return(
         <div class="contenedorItems__item">
             <h2 >Kit cilindro FZ16</h2>
             <img src={biela}/>
-            <ItemCount/>
+            <ItemCount stock={11} initial={1}/>
             <h3 >$350.000</h3>
             <button type="submit" className="contenedorItems__item__boton">Comprar</button>
         </div>
