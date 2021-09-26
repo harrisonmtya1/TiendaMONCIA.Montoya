@@ -6,11 +6,11 @@ export default function ItemCount({stock,initial}){
     const [cantidad, setCantidad]= useState(initial);
 
 const sumar=()=>{
-    (cantidad==stock? alert("Cantidad igual a stock") : setCantidad (cantidad+1));
+    (cantidad===stock? alert("Cantidad igual a stock") : setCantidad (cantidad+1));
     
 };
 const restar=()=>{
-    (cantidad==initial? alert("Cantidad igual a inicial"): setCantidad (cantidad-1));
+    (cantidad===initial? alert("Cantidad igual a inicial"): setCantidad (cantidad-1));
 };
 
     return(

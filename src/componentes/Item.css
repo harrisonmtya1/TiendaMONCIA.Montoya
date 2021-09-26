@@ -1,0 +1,33 @@
+.contenedorItems{
+  width: 25%;
+  display: inline-block;
+}
+.contenedorItems .contenedorItems__item {
+      border: 1px solid red;
+      border-bottom: 5px solid red;
+      padding: 5px;
+      margin: 20px; }
+    .contenedorItems img {
+      width: 100%;
+      height: auto; }
+    .contenedorItems h2 {
+      color: black;
+      text-align: left;
+      letter-spacing: 0; }
+    .contenedorItems h3 {
+      text-align: center;
+      display: block;
+      color: black;
+      text-align: left;
+      letter-spacing: 0; }
+    .contenedorItems input {
+      height: 2em;
+      width: 8em; }
+    .contenedorItems .contenedorItems__item__boton {
+      border-radius: 10px;
+      height: 2em;
+      width: 8em;
+      background-color: black;
+      color: red;
+      border: 1px solid red;
+    margin: 2px; } 

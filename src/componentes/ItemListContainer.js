@@ -1,11 +1,16 @@
+
 import './ItemListContainer.css';
-import Producto from '../componentes/Producto';
+import ItemList from '../componentes/ItemList';
+import ItemDetailContainer from '../componentes/ItemDetailContainer'
 
 export default function ItemListContainer({greeting}){
+  
+
 return(
     <div>
         <div>{greeting}</div>
-     <Producto/>
+     <ItemList/>
+     <ItemDetailContainer/>
     </div>
 );
 

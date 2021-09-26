@@ -1,9 +1,4 @@
-.contenedorItems {
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 5px; }
+
     .contenedorItems .contenedorItems__item {
       border: 1px solid red;
       border-bottom: 5px solid red;
@@ -17,6 +12,8 @@
       text-align: left;
       letter-spacing: 0; }
     .contenedorItems h3 {
+      text-align: center;
+      display: block;
       color: black;
       text-align: left;
       letter-spacing: 0; }
@@ -29,4 +26,5 @@
       width: 8em;
       background-color: black;
       color: red;
-      border: 1px solid red; } 
+      border: 1px solid red;
+    margin: 2px; } 
