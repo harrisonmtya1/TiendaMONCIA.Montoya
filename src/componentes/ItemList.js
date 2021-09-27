@@ -11,42 +11,42 @@ export default function ItemList() {
             const productos = [
                 {
                     nombre: "Kit Cilindro FZ16",
-                    imagen:"../images/kitcilindro.jpg",
+                    imagen:"/images/kitcilindro.jpg",
                     precio:"$350.000",
                     stock:11,
                     inicial:1
                 },
                 {
                     nombre: "Biela FZ16",
-                    imagen:"../images/bielafz16.jpg",
+                    imagen:"/images/bielafz16.jpg",
                     precio:"$180.000",
                     stock:11,
                     inicial:1
                 },
                 {
                     nombre: "Kit Psiton",
-                    imagen:"../images/kitpiston.png",
+                    imagen:"/images/kitpiston.png",
                     precio:"$260.000",
                     stock:11,
                     inicial:1
                 },
                 {
                     nombre: "Llantas Sahara",
-                    imagen:"../images/llantasahara.png",
+                    imagen:"/images/llantasahara.png",
                     precio:"$410.000",
                     stock:11,
                     inicial:1
                 },
                 {
                     nombre: "Llantas Sahara",
-                    imagen:"../images/llantasahara.png",
+                    imagen:"/images/llantasahara.png",
                     precio:"$410.000",
                     stock:11,
                     inicial:1
                 },
                 {
                     nombre: "Llantas Sahara",
-                    imagen:"../images/llantasahara.png",
+                    imagen:"/images/llantasahara.png",
                     precio:"$410.000",
                     stock:11,
                     inicial:1
