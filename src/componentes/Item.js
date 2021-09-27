@@ -6,7 +6,7 @@ import ItemCount from "./ItemCount";
 export default function Item({nombre, imagen , stock ,inicial ,precio}) {
 
     return (
-        <div>
+        <div style={{display:"inline"}}>
             <div className="contenedorItems">
                 <div className="contenedorItems__item">
                     <h2 >{nombre}</h2>

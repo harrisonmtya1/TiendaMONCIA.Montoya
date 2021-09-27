@@ -4,11 +4,11 @@ import '../componentes/ItemDetailContainer.css'
 
 export default function ItemDetailContainer(){
     
-    const [itemDetail, setItemDetail] = useState();
+    const [itemDetail, setItemDetail] = useState({});
 
     const getDetail = new Promise((resolve) => {
         setTimeout(() => {
-            const Producto = 
+            const producto = 
                 {
                     nombre: "Kit Cilindro FZ16",
                     imagen:"../images/kitcilindro.jpg",
@@ -17,7 +17,7 @@ export default function ItemDetailContainer(){
                 }
                 
             
-            resolve(Producto);
+            resolve(producto);
         }, 2000)
     })
 
