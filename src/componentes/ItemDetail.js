@@ -4,7 +4,7 @@ const ItemDetail=(props)=>{
 return(
 <div>
 <div className="contenedorItems">
-    {console.log(props.data)}
+    
                 <div className="contenedorItems__item">
                     <h2 >{props.data.nombre}</h2>
                     <img src={props.data.imagen} alt="img"/>
