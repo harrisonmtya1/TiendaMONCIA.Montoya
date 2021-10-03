@@ -11,8 +11,6 @@ function App() {
 
       <NavBar></NavBar>
       <RouterApp/>
-      {/* <ItemListContainer greeting={"Bienvenido a Tienda MONCIA"} />
-      <ItemDetailContainer/> */}
     </div>
   );
 }
