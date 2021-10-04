@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css';
 import CardWidget from '../componentes/CartWidget';
-import {Link} from 'react-router-dom';
+import { NavDropdown } from 'react-bootstrap';
+
 
 
 export default function BarraNavegacion() {
@@ -16,7 +17,11 @@ export default function BarraNavegacion() {
           <Navbar.Brand href="/">MONCIA</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Productos</Nav.Link>
-            <Nav.Link href="/detalles">Detalles</Nav.Link>
+            {/* <Nav.Link href="/detalles">Detalles</Nav.Link> */}
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/categoria/1">Promociones</NavDropdown.Item>
+              <NavDropdown.Item href="/categoria/2">Lo mas Nuevo</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Container>
         <CardWidget />

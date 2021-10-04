@@ -1,10 +1,15 @@
 import React,{useState,useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from '../componentes/ItemList';
+import { useParams } from 'react-router-dom';
 
+// la categoria 1 es promociones la categoria 2 es lo mas nuevo
 
 export default function ItemListContainer({greeting}){
     const [items, setItems] = useState([]);
+    const {idCategoria} = useParams();
+
+    console.log(idCategoria);
 
     const getItems = new Promise((resolve) => {
         setTimeout(() => {
@@ -15,7 +20,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/kitcilindro.jpg",
                     precio:"$350.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:1
                 },
                 {
                     id:2,
@@ -23,7 +30,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/bielafz16.jpg",
                     precio:"$180.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:1
                 },
                 {
                     id:3,
@@ -31,7 +40,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/kitpiston.png",
                     precio:"$260.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:1
                 },
                 {
                     id:4,
@@ -39,7 +50,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/llantasahara.png",
                     precio:"$410.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:1
                 },
                 {
                     id:5,
@@ -47,7 +60,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/manzanaclutchcbf125.jpg",
                     precio:"$190.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:2
                 },
                 {
                     id:6,
@@ -55,7 +70,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/kitdearrastre.jpg",
                     precio:"$310.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:2
                 },
                 {
                     id:7,
@@ -63,7 +80,9 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/kitbombafreno.jpg",
                     precio:"$120.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:2
                 },
                 {
                     id:8,
@@ -71,11 +90,20 @@ export default function ItemListContainer({greeting}){
                     imagen:"/images/kitcilindro2.jpg",
                     precio:"$310.000",
                     stock:11,
-                    inicial:1
+                    inicial:1,
+                    detalles: "DETALLES",
+                    categoria:2
                 }
                 
             ]
-            resolve(productos);
+            var arrayCategoria=[];
+            for (let producto of productos){
+                if(producto.categoria==idCategoria){
+                    arrayCategoria.push(producto)
+                }
+            }
+            if(arrayCategoria.length !==0){resolve(arrayCategoria);}else{resolve(productos);}
+            
         }, 2000)
     })
 

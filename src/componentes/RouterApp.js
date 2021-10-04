@@ -8,7 +8,8 @@ export default function RouterApp() {
         <>
             <BrowserRouter>
                 <Switch>
-                    <Route path="/detalles" component={ItemDetailContainer} />
+                    <Route path="/detalles/:id" component={ItemDetailContainer} />
+                    <Route path="/categoria/:idCategoria" component={ItemListContainer}/>
                     <Route path="/">
                         <ItemListContainer greeting={"Bienvenido a Tienda MONCIA"} />
                     </Route>

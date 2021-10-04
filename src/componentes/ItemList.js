@@ -1,10 +1,10 @@
 import Item from '../componentes/Item'
-import React, { useState, useEffect } from 'react';
+
 import '../componentes/ItemList.css'
 
 export default function ItemList(props) {
 
-   console.log(props.datos);
+   
     
     return (
         <div >
