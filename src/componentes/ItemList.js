@@ -12,7 +12,7 @@ export default function ItemList(props) {
             
             props.datos.map((item,index) => {
                return(
-                   <Item key={index} id={item.id} nombre={item.nombre} imagen={item.imagen} stock={item.stock} inicial={item.inicial} precio={item.precio}/>
+                   <Item key={index} id={item.id} nombre={item.nombre} imagen={item.imagen} stock={item.stock} inicial={item.inicial} precio={item.precio} detalles={item.detalles}/>
                )
             })) : (
                 <div>
