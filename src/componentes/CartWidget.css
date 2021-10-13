@@ -1,5 +1,21 @@
-.divShoppingCartIcon{
-    margin-right: 20px;
-    display: inline-block;
+.CartWidgetCerrado{
+    
+    display: none;
 }
-h3{display: inline;}
+
+.CartWidgetAbierto{
+    border: solid red 1px;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    display: blok;
+    background-color: white;
+}
+
+.cerrar{
+    cursor: pointer;
+    display: inline;
+}
