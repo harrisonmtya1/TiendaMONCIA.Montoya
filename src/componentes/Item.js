@@ -10,7 +10,7 @@ import { useContext } from "react";
 export default function Item({id,nombre, imagen , stock ,inicial ,precio,detalles}) {
 
     const [cantidad, setCantidad]= useState(inicial);
-    const {productos, añadirProducto}= useContext(CartContext)
+    const { añadirProducto}= useContext(CartContext)
 
     const sumar=()=>{
         (cantidad===stock? alert("Cantidad igual a stock") : setCantidad (cantidad+1));

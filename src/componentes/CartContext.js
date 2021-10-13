@@ -11,10 +11,15 @@ const CartProvider = ({ children }) => {
     const añadirProducto = (producto) => {
         if(productos.length !==0){
         var encontrado= productos.find(elemento=> elemento.id==producto.id);
-        (encontrado ==undefined) ? (productos.push(producto)):(alert("Ya has añadido este producto"));
+        if(encontrado ===undefined) {
+            productos.push(producto);
+            setProductos([...productos]);
+        }else{
+            alert("Ya has añadido este producto")}
         
     }else{
             productos.push(producto);
+            setProductos([...productos]);
             
         }
     }
@@ -26,7 +31,8 @@ const CartProvider = ({ children }) => {
                posicion=index;
            }
           }
-          productos.slice(posicion,1);
+        var productos2=productos.slice(posicion,1);
+        
     }
 
     const vaciarCarro=()=>{
