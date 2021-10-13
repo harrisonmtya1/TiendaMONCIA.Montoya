@@ -6,7 +6,7 @@
 .CartWidgetAbierto{
     border: solid red 1px;
     width: 25%;
-    height: 100%;
+    height: auto;
     position: absolute;
     z-index: 2;
     top: 0;
@@ -18,4 +18,27 @@
 .cerrar{
     cursor: pointer;
     display: inline;
+    color: black;
+    background-color: red;
+    border-radius: 5px;
+   
 }
+
+.contenedorItem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: red 2px solid;
+    
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.divTitulo{
+    display: flex;
+    flex-direction: row;
+}
+

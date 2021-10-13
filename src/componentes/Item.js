@@ -22,7 +22,7 @@ export default function Item({id,nombre, imagen , stock ,inicial ,precio,detalle
 
     const comprar=()=>{
        añadirProducto({id,nombre,imagen,stock,inicial,precio,detalles,cantidad})
-       console.log(productos);
+       
     }
     
     return (
