@@ -4,7 +4,7 @@ import '../componentes/ItemList.css'
 
 export default function ItemList(props) {
 
-   console.log(props.data)
+   
     
     return (
         <div >

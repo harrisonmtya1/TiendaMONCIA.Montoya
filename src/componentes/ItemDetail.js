@@ -1,18 +1,18 @@
 import '../componentes/ItemDetail.css';
 import ItemCount from '../componentes/ItemCount'
-import { useParams } from 'react-router';
+
 import React, {useState} from 'react';
 import {useContext} from 'react';
 import CartContext from '../componentes/CartContext'
 
-const ItemDetail = (props) => {
+const ItemDetail = ({data}) => {
 
-    const {id}= useParams();
+    const item=data[0];
+   
     const [cantidad, setCantidad]= useState(1);
-    const {productos,añadirProducto}=useContext(CartContext);
+    const {añadirProducto}=useContext(CartContext);
 
-    if(props.data.length !==0 &&  props.data.length !== undefined){
-    var item = (props.data).find(elemento => elemento.id == id);}
+    
     
     
 
@@ -27,31 +27,25 @@ const ItemDetail = (props) => {
     const comprar=()=>{
         item.cantidad=cantidad;
         añadirProducto(item)
-        console.log(productos);
+        
      }
 
     return (
         <div>
-            {
-            props.data.length !==0 &&  props.data.length !== undefined?
             
-                (<div className="contenedorItems">
+            
+                <div className="contenedorItems">
 
                     <div className="contenedorItems__item">
                         <h2 >{item.nombre}</h2>
                         <img src={item.imagen} alt="img" />
-                        <h3 >{props.precio}</h3>
+                        <h3 >{item.precio}</h3>
                         <ItemCount cantidad={cantidad} sumar={sumar} restar={restar}/>
                         <button type="submit" className="contenedorItems__item__boton" onClick={comprar}>Comprar</button>
                         <p>{`${item.detalles} Este es el Detalle`}</p>
                     </div>
-                </div>) : (
-            
-                <div>
-                    <p>Cargando....</p>
                 </div>
-                )
-            }
+            
 
         </div>
     )

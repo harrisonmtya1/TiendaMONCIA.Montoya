@@ -12,12 +12,12 @@ function App() {
   return (
     <div className="App">
 
-      <NavBar></NavBar>
+
       <CartProvider>
-        <Cart />
+        
         <RouterApp />
       </CartProvider>
-      {/* <CartWidget></CartWidget> */}
+
     </div>
   );
 }
