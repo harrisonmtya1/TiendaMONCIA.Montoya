@@ -10,6 +10,7 @@ import {getFirestore, collection, getDocs} from 'firebase/firestore'
 export default function ItemListContainer({greeting}){
     const [items, setItems] = useState([]);
     const {idCategoria} = useParams();
+    
 
 
     async function getProductos(db){
@@ -17,24 +18,26 @@ export default function ItemListContainer({greeting}){
         const productosSnapshot= await getDocs(productos)
         const listaProductos = productosSnapshot.docs.map(doc => doc.data());
         setItems(listaProductos)
+        filtrarProductos(listaProductos)
         return listaProductos;
-
     }
 
-    const filtrarProductos=()=>{
+    const filtrarProductos=(listaProductos)=>{
+       
         var arrayCategoria=[];
-                for (let item of items){
+        console.log(listaProductos)
+                for (let item of listaProductos){
                     if(item.categoria==idCategoria){
                         arrayCategoria.push(item)
                     }
                 }
-                if(arrayCategoria.length !==0){setItems(arrayCategoria);}else{setItems(items);}
-    }
+                if(arrayCategoria.length !==0){setItems(arrayCategoria);}else{setItems(listaProductos);}
+   }
   
 
     useEffect(() => {
        getProductos(db);
-       filtrarProductos();
+      
     },[]);
 
 return(
