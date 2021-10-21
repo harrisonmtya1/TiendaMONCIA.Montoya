@@ -36,7 +36,7 @@ const CartProvider = ({ children }) => {
     }
 
     const vaciarCarro=()=>{
-        productos=[]
+        setProductos([])
     }
 
     const data = {

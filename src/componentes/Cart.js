@@ -10,7 +10,7 @@ const Cart = () => {
   const { productos } = useContext(CartContext);
 
   const cartWidget = () => {
-    if (clase == "CartWidgetCerrado") {
+    if (clase === "CartWidgetCerrado") {
       setClase("CartWidgetAbierto")
     } else {
       setClase("CartWidgetCerrado")

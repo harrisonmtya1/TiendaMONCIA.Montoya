@@ -42,3 +42,27 @@ img{
     flex-direction: row;
 }
 
+.inputFormulario{
+    width: 100%;
+    border-radius: 5px;
+    border:none;
+    border-top: solid red 1px;
+    margin-bottom: 5px;
+}
+
+.inputFormulario:focus{
+    width: 100%;
+    border-radius: 5px;
+    border:none;
+    border-top: solid red 1px;
+    margin-bottom: 5px;
+}
+
+.btnCofirmarOrden, .tituloFormulario{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+}
