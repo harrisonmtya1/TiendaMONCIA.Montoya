@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/TiendaMONCIA.Montoya/static/css/main.0617debc.chunk.css",
+    "main.js": "/TiendaMONCIA.Montoya/static/js/main.82ac3531.chunk.js",
+    "main.js.map": "/TiendaMONCIA.Montoya/static/js/main.82ac3531.chunk.js.map",
+    "runtime-main.js": "/TiendaMONCIA.Montoya/static/js/runtime-main.d6318ed6.js",
+    "runtime-main.js.map": "/TiendaMONCIA.Montoya/static/js/runtime-main.d6318ed6.js.map",
+    "static/css/2.818011ed.chunk.css": "/TiendaMONCIA.Montoya/static/css/2.818011ed.chunk.css",
+    "static/js/2.325091cd.chunk.js": "/TiendaMONCIA.Montoya/static/js/2.325091cd.chunk.js",
+    "static/js/2.325091cd.chunk.js.map": "/TiendaMONCIA.Montoya/static/js/2.325091cd.chunk.js.map",
+    "static/js/3.6b840900.chunk.js": "/TiendaMONCIA.Montoya/static/js/3.6b840900.chunk.js",
+    "static/js/3.6b840900.chunk.js.map": "/TiendaMONCIA.Montoya/static/js/3.6b840900.chunk.js.map",
+    "index.html": "/TiendaMONCIA.Montoya/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/TiendaMONCIA.Montoya/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.0617debc.chunk.css.map": "/TiendaMONCIA.Montoya/static/css/main.0617debc.chunk.css.map",
+    "static/js/2.325091cd.chunk.js.LICENSE.txt": "/TiendaMONCIA.Montoya/static/js/2.325091cd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d6318ed6.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.325091cd.chunk.js",
+    "static/css/main.0617debc.chunk.css",
+    "static/js/main.82ac3531.chunk.js"
+  ]
+}
