@@ -39,10 +39,10 @@ const ItemDetail = ({data}) => {
                     <div className="contenedorItems__item">
                         <h2 >{item.nombre}</h2>
                         <img src={item.imagen} alt="img" />
-                        <h3 >{item.precio}</h3>
+                        <h3 >{`Precio: $ ${item.precio}`}</h3>
                         <ItemCount cantidad={cantidad} sumar={sumar} restar={restar}/>
                         <button type="submit" className="contenedorItems__item__boton" onClick={comprar}>Comprar</button>
-                        <p>{`${item.detalles} Este es el Detalle`}</p>
+                        <p>{`${item.detalles}`}</p>
                     </div>
                 </div>
             

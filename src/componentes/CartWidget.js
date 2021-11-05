@@ -11,19 +11,34 @@ import db from '../FireBase'
 
 export default function CardWidget({ clase, cerrar }) {
 
-    const { productos, eliminarProducto,vaciarCarro } = useContext(CartContext);
-    
+    const { productos, eliminarProducto, vaciarCarro } = useContext(CartContext);
+    var claseFormulario = "ocultar";
+
+    if (productos.length !== 0) {
+        claseFormulario = "mostrar"
+    }
 
 
     const enviarDatos = (e) => {
         e.preventDefault()
-        pedido.comprador.name=e.target[0].value;
-        pedido.comprador.correo=e.target[1].value;
-        pedido.comprador.direccion=e.target[2].value;
-        pedido.comprador.telefono=e.target[3].value;
-        console.log(pedido)
-        ordenarFiraBase(pedido)
-        vaciarCarro()
+        let semaforo = true
+        for (let valor of e.target) {
+
+            if (valor.value == "") {
+                alert("Para completar su orden por favor diligenciar el formulario por completo")
+                semaforo = false
+                break
+            }
+        }
+        if (semaforo) {
+            pedido.comprador.name = e.target[0].value;
+            pedido.comprador.correo = e.target[1].value;
+            pedido.comprador.direccion = e.target[2].value;
+            pedido.comprador.telefono = e.target[3].value;
+            console.log(pedido)
+            ordenarFiraBase(pedido)
+            vaciarCarro()
+        }
     }
 
     const pedido = {
@@ -56,7 +71,7 @@ export default function CardWidget({ clase, cerrar }) {
 
     return (
         <div className={`${clase}`}>
-            <div className={"divTitulo"}><p>Carrito de Compras</p><h1 onClick={cerrar} className={"cerrar"}>X</h1></div>
+            <div className={"divTitulo"}><p>Carrito de Compras</p><h3 onClick={cerrar} className={"cerrar"}>X</h3></div>
             {productos.map((producto) => {
                 return (
                     <div className={"contenedorItem"}>
@@ -66,7 +81,7 @@ export default function CardWidget({ clase, cerrar }) {
                             <p>{producto.detalles}</p>
                             <p>Cantidad: {`${producto.cantidad}`}</p>
                             <h4>{`$ ${producto.precio}`}</h4>
-                            <DeleteIcon onClick={eliminarProducto(producto.id)} />
+                            <DeleteIcon onClick={() => eliminarProducto(producto.id)} />
                         </div>
 
                     </div>
@@ -75,11 +90,11 @@ export default function CardWidget({ clase, cerrar }) {
             <div>{`Total compra: $ ${pedido.total}`}</div>
             <div>
                 <h6 className="tituloFormulario">Completa tu Compra y disfruta tu producto</h6>
-                <form onSubmit={enviarDatos}>
-                    <input className="inputFormulario" type="text" placeholder="Nombre" name="nombre"  />
-                    <input className="inputFormulario" type="email" placeholder="Correo electronico" name="correo"  />
-                    <input className="inputFormulario" type="text" placeholder="Direccion de domicilio" name="direccion"  />
-                    <input className="inputFormulario" type="number" placeholder="Numero de telefono" name="numero"  />
+                <form className={claseFormulario} onSubmit={enviarDatos}>
+                    <input className="inputFormulario" type="text" placeholder="Nombre" name="nombre" />
+                    <input className="inputFormulario" type="email" placeholder="Correo electronico" name="correo" />
+                    <input className="inputFormulario" type="text" placeholder="Direccion de domicilio" name="direccion" />
+                    <input className="inputFormulario" type="number" placeholder="Numero de telefono" name="numero" />
                     <input className="btnCofirmarOrden" type="submit" value="Confirmar Orden" />
                 </form>
 

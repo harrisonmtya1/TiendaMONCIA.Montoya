@@ -9,13 +9,11 @@
       height: auto; }
     .contenedorItems h2 {
       color: black;
-      text-align: left;
       letter-spacing: 0; }
     .contenedorItems h3 {
       text-align: center;
       display: block;
       color: black;
-      text-align: left;
       letter-spacing: 0; }
     .contenedorItems input {
       height: 2em;

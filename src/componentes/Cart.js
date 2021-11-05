@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import CartContext from '../componentes/CartContext';
 
 const Cart = () => {
-  const [clase, setClase] = useState(["CartWidgetCerrado"]);
+  const [clase, setClase] = useState("CartWidgetCerrado");
   const { productos } = useContext(CartContext);
 
   const cartWidget = () => {

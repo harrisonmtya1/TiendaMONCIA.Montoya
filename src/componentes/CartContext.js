@@ -25,14 +25,17 @@ const CartProvider = ({ children }) => {
     }
 
     const eliminarProducto=(id)=>{
+        console.log(productos)
          let posicion;
           for(let[index,elemento] of productos.entries()){
            if(elemento.id==id){
                posicion=index;
+               console.log(posicion)
            }
           }
-        var productos2=productos.slice(posicion,1);
-        
+        productos.splice(posicion,1);
+        console.log(productos)
+        setProductos([...productos])
     }
 
     const vaciarCarro=()=>{

@@ -32,7 +32,7 @@ export default function Item({id,nombre, imagen , stock ,inicial ,precio,detalle
                     <h2 >{nombre}</h2>
                     <img src={imagen} alt="img"/>
                     <ItemCount cantidad={cantidad} sumar={sumar} restar={restar} />
-                    <h3 >{`$ ${precio}`}</h3>
+                    <h3 >{`Precio: $ ${precio}`}</h3>
                     <button type="submit" className="contenedorItems__item__boton" onClick={comprar}>Comprar</button>
                     <button type="submit" className="contenedorItems__item__boton"><Link to={`/detalles/${id}`}>Detalle</Link></button>
                 </div>
